@@ -99,7 +99,7 @@ export const GUIDES = [
     description: '設計精巧且極具現代感的城市飯店。位於旭橋站附近，早餐豐富且評價極高，是我們 D1 的落腳點。',
     trivia: '13:00-21:00 提供的迎賓飲料除了咖啡，竟然還有在地「泡盛」無限暢飲，簡直是酒鬼天堂！',
     osmCoords: '26.2117,127.6733',
-    imageUrl: '/旭橋.jpg',
+    imageUrl: '旭橋.jpg',
     blogUrl: 'https://y00.tw/torifito-naha-asahibashi/'
   },
   {
@@ -107,7 +107,7 @@ export const GUIDES = [
     description: '那霸市區最方便的海鮮市場，有許多剛上岸的鮪魚。場內提供豐富的生魚片、烤扇貝與海鮮丼。',
     trivia: '雖然是市場，但環境非常乾淨清爽，是那霸吃「海鮮早餐」的最佳首選。',
     osmCoords: '26.2287,127.6833',
-    imageUrl: '/fish_market.jpg',
+    imageUrl: 'fish_market.jpg',
     blogUrl: 'https://y00.tw/tomari-iyumachi/'
   },
   {
@@ -115,7 +115,7 @@ export const GUIDES = [
     description: '世界前三大的水族館之一。震撼的「黑潮之海」巨型水槽，容納了巨大的鯨鯊與鬼蝠魟。',
     trivia: '鯨鯊每天 15:00 的餵食秀會「站著吃」，景象非常壯觀。',
     osmCoords: '26.6944,127.8779',
-    imageUrl: '/水族館.jpg',
+    imageUrl: '水族館.jpg',
     blogUrl: 'https://tc.tabirai.net/sightseeing/article/okinawa-churaumi-aquarium/'
   },
   {
@@ -123,7 +123,7 @@ export const GUIDES = [
     description: '沖繩超高人氣的頂級燒肉，以入口即化的和牛聞名。建議一定要提前預約或在開店前抵達。',
     trivia: '其主打的「頂級炙燒握壽司」是隱藏版神級美味，牛肉油脂會在口中完全綻放！',
     osmCoords: '26.4449,127.8105',
-    imageUrl: '/barbacue.jpg',
+    imageUrl: 'barbacue.jpg',
     blogUrl: 'https://www.u-shi.net/chinese/index.html'
   },
   {
@@ -131,7 +131,7 @@ export const GUIDES = [
     description: '隱身在恩納村的高質感 Villa 住宿。室內空間寬敞，非常適合家庭旅客，可以享受寧靜的度假氣息。',
     trivia: '距離海灘非常近，清晨或傍晚散步過去只要幾分鐘，是體驗沖繩慢活的最佳選擇。',
     osmCoords: '26.4442,127.8110',
-    imageUrl: '/mihana-onnason-okinawa-01.webp',
+    imageUrl: 'mihana-onnason-okinawa-01.webp',
     blogUrl: 'https://tw.hotels.com/ho2145327328/mihana-onna-village-villas-onna-ri-ben/'
   },
   {
@@ -139,7 +139,7 @@ export const GUIDES = [
     description: '充滿濃厚美國風情的娛樂複合型區塊。巨大的摩天輪、繽紛色彩的建築以及無敵夕陽海景是其亮點。',
     trivia: '這裡的前身是美軍機場改建，因此處處充滿了 1950 年代的復古美式氣氛。',
     osmCoords: '26.3158,127.7571',
-    imageUrl: '/USAVilage.jpg',
+    imageUrl: 'USAVilage.jpg',
     blogUrl: 'https://tw.bring-you.info/mihama-american-village'
   },
   {
@@ -147,7 +147,7 @@ export const GUIDES = [
     description: '那霸附近最大的新型商場，擁有 250 家以上的店舖。從名牌店到超市、家電應有盡有，且正對著大海。',
     trivia: '除了好買，這裡的美食街視野極佳，可以一邊吃拉麵一邊看著蔚藍的海景。',
     osmCoords: '26.2570,127.6970',
-    imageUrl: '/parco.jpg',
+    imageUrl: 'parco.jpg',
     blogUrl: 'https://www.viviantrip.com/san-a-parco-city/'
   },
   {
@@ -155,7 +155,7 @@ export const GUIDES = [
     description: '位於那霸市區，以極簡工業風與舒適空間著稱。步行即可到達國際通與波上宮，交通極其便利。',
     trivia: '一樓大廳提供各式調酒與飲品，環境非常放鬆，適合三五好友晚上在此小酌聊天。',
     osmCoords: '26.2201,127.6740',
-    imageUrl: '/雞尾酒.jpg',
+    imageUrl: '雞尾酒.jpg',
     blogUrl: 'https://www.tripadvisor.com.tw/Hotel_Review-g298224-d23259972-Reviews-Hotel_Cocktail_Stay_Naha-Naha_Okinawa_Prefecture.html'
   },
   {
@@ -163,7 +163,7 @@ export const GUIDES = [
     description: '冬季沖繩必玩！搭乘特製快艇出海，近距離觀察體型震撼的座頭鯨。店家提供接送與專業攝影服務。',
     trivia: '沖繩賞鯨的機率高達 98%，如果真的沒看到，通常店家會提供全額退費或再玩一次！',
     osmCoords: '26.2231,127.6744',
-    imageUrl: '/whale_watching.png',
+    imageUrl: 'whale_watching.png',
     blogUrl: 'https://www.berry7.com/lang/zh-TW/naha-whale'
   },
   {
@@ -171,7 +171,7 @@ export const GUIDES = [
     description: '波上宮座落於珊瑚礁岩之上，是沖繩八大神社之首。神社建築莊嚴，緊鄰波之上海灘。是祈求航海安全及身體健康的重要勝地。',
     trivia: '波上宮是沖繩唯一的「海灘神社」，站在海灘上可以看到神社屹立在崖邊。',
     osmCoords: '26.2208,127.6711',
-    imageUrl: '/波上宮.jpg',
+    imageUrl: '波上宮.jpg',
     blogUrl: 'https://tw.bring-you.info/naminoue-shrine'
   },
   {
@@ -179,7 +179,7 @@ export const GUIDES = [
     description: '東南亞最大的鐘乳石洞窟，全長五公里，洞內超過一百萬支鐘乳石，景象極其震撼。',
     trivia: '玉泉洞內的溫度長年保持在 21 度，冬暖夏涼非常舒服。',
     osmCoords: '26.1397,127.7503',
-    imageUrl: '/玉泉洞.jpg',
+    imageUrl: '玉泉洞.jpg',
     blogUrl: 'https://www.gyokusendo.co.jp/okinawaworld/tc/gyokusendo/'
   },
   {
@@ -187,7 +187,7 @@ export const GUIDES = [
     description: '2024年全新開幕的旗艦飯店。頂樓擁有無邊際泳池與空中酒吧，設計走的是高級現代波西米亞風。',
     trivia: '17:00-21:30 的 Happy Hour 提供免費的在地泡盛與特調飲料，絕對撐到你不想吃晚餐。',
     osmCoords: '26.1755,127.6470',
-    imageUrl: '/storyline.jpg',
+    imageUrl: 'storyline.jpg',
     blogUrl: 'https://vivawei.tw/storyline-senagajima/'
   },
   {
@@ -195,7 +195,7 @@ export const GUIDES = [
     description: '有「沖繩聖托里尼」之稱。純白建築沿著斜坡而建，聚集了眾多文青小店、咖啡廳以及知名的「幸福鬆餅」。',
     trivia: '因為就在機場跑道旁，這裡也是全沖繩看飛機起降最近、最震撼的地點。',
     osmCoords: '26.1747,127.6458',
-    imageUrl: '/瀨長島.jpg',
+    imageUrl: '瀨長島.jpg',
     blogUrl: 'https://tw.bring-you.info/senagajima'
   }
 ];
