@@ -11,7 +11,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab }) => {
   const navItems = [
     { type: TabType.PLAN, icon: 'fa-calendar-days', label: '行程' },
     { type: TabType.GUIDE, icon: 'fa-book-open', label: '導覽' },
-    { type: TabType.WALLET, icon: 'fa-wallet', label: '錢包' },
+    { type: TabType.WALLET, icon: 'fa-wallet', label: '匯率' },
     { type: TabType.LISTS, icon: 'fa-clipboard-list', label: '清單' },
     { type: TabType.INFO, icon: 'fa-info-circle', label: '資訊' },
   ];
@@ -22,9 +22,8 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab }) => {
         <button
           key={item.type}
           onClick={() => setActiveTab(item.type)}
-          className={`flex flex-col items-center py-1 transition-all duration-300 w-16 ${
-            activeTab === item.type ? 'text-[#008080] scale-110' : 'text-gray-400'
-          }`}
+          className={`flex flex-col items-center py-1 transition-all duration-300 w-16 ${activeTab === item.type ? 'text-[#008080] scale-110' : 'text-gray-400'
+            }`}
         >
           <i className={`fa-solid ${item.icon} text-xl`}></i>
           <span className="text-[10px] mt-1 font-medium">{item.label}</span>
