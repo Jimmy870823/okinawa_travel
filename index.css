@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Noto Sans TC', 'Quicksand', sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  @apply bg-[#F8F9FA] text-[#333] overflow-x-hidden;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Custom animations if needed */
+@layer utilities {
+  .animate-fade-in {
+    @apply animate-in fade-in duration-500;
+  }
+}

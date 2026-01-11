@@ -1,20 +1,54 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# 沖繩海島紀行 - 旅行小幫手
 
-# Run and deploy your AI Studio app
+這是一個為沖繩旅行設計的 React 應用程式，提供行程規劃、景點導覽、開銷記錄等功能。
 
-This contains everything you need to run your app locally.
+## 🛠 技術棧
 
-View your app in AI Studio: https://ai.studio/apps/drive/1M8kq8DGWvMmPGrKTI8yamfmAKAkN9FDF
+- **框架**: React 19 + TypeScript
+- **建置工具**: Vite
+- **樣式**: Tailwind CSS
+- **動畫**: Framer Motion
+- **部署**: GitHub Actions + GitHub Pages
 
-## Run Locally
+## 🚀 快速開始
 
-**Prerequisites:**  Node.js
+### 1. 安裝環境
+確保你已安裝 Node.js (推薦 v20+)。
 
+```bash
+npm install
+```
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 2. 本地開發
+啟動開發伺服器：
+
+```bash
+npm run dev
+```
+
+### 3. 專案打包
+生成生產環境檔案：
+
+```bash
+npm run build
+```
+
+## 📦 部署說明
+
+本專案已設定 GitHub Actions。當你推送到 `main` 分支時，系統會自動偵測並部署到 GitHub Pages。
+
+### 手動部署
+若需要手動部署，可以使用：
+
+```bash
+npm run deploy
+```
+
+## 📂 檔案結構
+
+- `/components`: UI 元件
+- `/constants`: 常量資料
+- `App.tsx`: 主要邏輯
+- `index.tsx`: 入口點
+- `tailwind.config.js`: Tailwind 設定
+- `.github/workflows/deploy.yml`: 自動部署設定
