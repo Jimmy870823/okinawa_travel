@@ -13,7 +13,51 @@ const ListsTab: React.FC = () => {
     const savedNotes = localStorage.getItem('trip_notes');
 
     if (savedChecks) {
-      setChecks(JSON.parse(savedChecks));
+      const currentChecks = JSON.parse(savedChecks);
+      const initialItems = [
+        { id: '1', text: '護照 (有效期需六個月以上)', completed: false },
+        { id: '2', text: '台灣駕照正本+日文譯本 (羊已準備；禮拜三若有時間也換個譯本)', completed: false },
+        { id: '3', text: '網卡*6 (Bobo已準備)', completed: false },
+        { id: '4', text: '日幣現金 (需要提領 - 羊、Bobo、蓉)', completed: false },
+        { id: '5', text: '暈船藥、暈車藥 (賞鯨必備)', completed: false },
+        { id: '6', text: '相機+電池*2', completed: false },
+        { id: '7', text: '充電器 / 行動電源', completed: false },
+        { id: '8', text: '長袖*4、睡衣 (T 恤、大學 T、薄針織衫。建議採「洋蔥式穿法」)', completed: false },
+        { id: '9', text: '外套*1 (「防風外套」或「輕羽絨」)', completed: false },
+        { id: '10', text: '長褲or裙子*4 (建議最多3件裙子，第三天賞鯨不建議穿裙子)', completed: false },
+        { id: '11', text: '布鞋*1', completed: false },
+        { id: '12', text: '襪子*4', completed: false },
+        { id: '13', text: '內衣褲*4', completed: false },
+        { id: '14', text: '拖鞋or涼鞋 (海灘/瀨長島必備)', completed: false },
+        { id: '15', text: '泳具 (泡戶外 Spa 用)', completed: false },
+        { id: '16', text: '穿搭配件 (帽子、太陽眼鏡 - 沖繩紫外線一年四季都很強)', completed: false },
+        { id: '17', text: '行動電源 (不可拖運，需有標示；限100Wh/20,000mAh；置於座椅前方收納)', completed: false },
+        { id: '18', text: '耳機', completed: false },
+        { id: '19', text: '頸枕 (開車時間較長，可自行評估)', completed: false },
+        { id: '20', text: '護唇膏、乳液、保濕', completed: false },
+        { id: '21', text: '防曬', completed: false },
+        { id: '22', text: '塑膠袋 (裝濕衣服)', completed: false },
+        { id: '23', text: '防水袋/夾鏈袋 (賞鯨防浪花噴濕手機/相機)', completed: false },
+        { id: '24', text: 'Google 翻譯 APP', completed: false }
+      ];
+
+      // Merge: Add items that don't exist in current state
+      const merged = [...currentChecks];
+      initialItems.forEach(initItem => {
+        const itemExists = currentChecks.some((c: any) =>
+          c.text.split('(')[0].trim() === initItem.text.split('(')[0].trim()
+        );
+        if (!itemExists) {
+          merged.push(initItem);
+        }
+      });
+
+      if (merged.length !== currentChecks.length) {
+        setChecks(merged);
+        localStorage.setItem('trip_checklist', JSON.stringify(merged));
+      } else {
+        setChecks(currentChecks);
+      }
     } else {
       const initial = [
         { id: '1', text: '護照 (有效期需六個月以上)', completed: false },
@@ -23,7 +67,7 @@ const ListsTab: React.FC = () => {
         { id: '5', text: '暈船藥、暈車藥 (賞鯨必備)', completed: false },
         { id: '6', text: '相機+電池*2', completed: false },
         { id: '7', text: '充電器 / 行動電源', completed: false },
-        { id: '8', text: '長袖*4、睡衣 (T 恤、大學 T、薄針織衫。建議洋蔥式穿法)', completed: false },
+        { id: '8', text: '長袖*4、睡衣 (T 恤、大學 T、薄針織衫。建議採「洋蔥式穿法」)', completed: false },
         { id: '9', text: '外套*1 (「防風外套」或「輕羽絨」)', completed: false },
         { id: '10', text: '長褲or裙子*4 (建議最多3件裙子，第三天賞鯨不建議穿裙子)', completed: false },
         { id: '11', text: '布鞋*1', completed: false },
@@ -31,14 +75,14 @@ const ListsTab: React.FC = () => {
         { id: '13', text: '內衣褲*4', completed: false },
         { id: '14', text: '拖鞋or涼鞋 (海灘/瀨長島必備)', completed: false },
         { id: '15', text: '泳具 (泡戶外 Spa 用)', completed: false },
-        { id: '16', text: '穿搭配件 (帽子、太陽眼鏡)', completed: false },
-        { id: '17', text: '行動電源 (不可拖運，需有清晰標示，於座椅前方收納)', completed: false },
+        { id: '16', text: '穿搭配件 (帽子、太陽眼鏡 - 沖繩紫外線一年四季都很強)', completed: false },
+        { id: '17', text: '行動電源 (不可拖運，需有標示；限100Wh/20,000mAh；置於座椅前方收納)', completed: false },
         { id: '18', text: '耳機', completed: false },
         { id: '19', text: '頸枕 (開車時間較長，可自行評估)', completed: false },
         { id: '20', text: '護唇膏、乳液、保濕', completed: false },
         { id: '21', text: '防曬', completed: false },
         { id: '22', text: '塑膠袋 (裝濕衣服)', completed: false },
-        { id: '23', text: '防水袋/夾鏈袋 (賞鯨防手機噴濕)', completed: false },
+        { id: '23', text: '防水袋/夾鏈袋 (賞鯨防浪花噴濕手機/相機)', completed: false },
         { id: '24', text: 'Google 翻譯 APP', completed: false }
       ];
       setChecks(initial);
