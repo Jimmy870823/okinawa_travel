@@ -11,7 +11,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, setActiveTab }) => {
   const navItems = [
     { type: TabType.PLAN, icon: 'fa-calendar-days', label: '行程' },
     { type: TabType.GUIDE, icon: 'fa-book-open', label: '導覽' },
-    { type: TabType.WALLET, icon: 'fa-wallet', label: '匯率' },
+    { type: TabType.WALLET, icon: 'fa-calculator', label: '匯率' },
     { type: TabType.LISTS, icon: 'fa-clipboard-list', label: '清單' },
     { type: TabType.INFO, icon: 'fa-info-circle', label: '資訊' },
   ];
