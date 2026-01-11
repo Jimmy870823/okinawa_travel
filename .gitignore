@@ -33,3 +33,7 @@ dist-ssr
 # Vite
 # typescript
 *.tsbuildinfo
+
+# User Data
+沖繩旅遊清單 - 工作表1.csv
+/dist

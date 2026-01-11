@@ -114,6 +114,41 @@ const InfoTab: React.FC = () => {
           <li><strong>室內禮儀：</strong> 進入飯店榻榻米區務必脫鞋。</li>
         </ul>
       </div>
+
+      {/* Solemn Vow */}
+      <div className="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-2xl p-6 shadow-sm border border-indigo-100 relative overflow-hidden">
+        <div className="absolute top-0 right-0 p-4 opacity-10">
+          <i className="fa-solid fa-hand-fist text-6xl rotate-12"></i>
+        </div>
+        <h3 className="text-sm font-black text-indigo-800 mb-4 flex items-center relative z-10">
+          <i className="fa-solid fa-scroll mr-2 text-indigo-600"></i> 旅遊莊嚴宣誓
+        </h3>
+        <div className="space-y-3 relative z-10">
+          <div className="bg-white/60 backdrop-blur-sm p-4 rounded-xl border border-white/50">
+            <p className="text-xs font-bold text-indigo-900 leading-relaxed mb-4 text-center">
+              「我，在此莊嚴宣誓：」
+            </p>
+            <ul className="text-[11px] text-gray-700 space-y-3 list-none">
+              <li className="flex items-start">
+                <span className="bg-indigo-600 text-white min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] mr-2 mt-0.5">1</span>
+                <p><strong>正面思考：</strong> 面對所有安排，我保證不當「事後諸葛」，只有讚美，沒有抱怨。</p>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-indigo-600 text-white min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] mr-2 mt-0.5">2</span>
+                <p><strong>情緒管理：</strong> 就算太陽很大、走路很累、排隊很久，我也會保持微笑，絕不臭臉。</p>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-indigo-600 text-white min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] mr-2 mt-0.5">3</span>
+                <p><strong>互助互愛：</strong> 我會準時集合，不拖延大家的行程；主動幫家人拍美照，大家一起美美出鏡。</p>
+              </li>
+              <li className="flex items-start">
+                <span className="bg-indigo-600 text-white min-w-[18px] h-[18px] rounded-full flex items-center justify-center text-[9px] mr-2 mt-0.5">4</span>
+                <p><strong>最高準則：</strong> 回家目標只有一個，就是開開心心出門，平平安安回家！</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

@@ -11,24 +11,40 @@ const ListsTab: React.FC = () => {
   useEffect(() => {
     const savedChecks = localStorage.getItem('trip_checklist');
     const savedNotes = localStorage.getItem('trip_notes');
-    
+
     if (savedChecks) {
       setChecks(JSON.parse(savedChecks));
     } else {
       const initial = [
         { id: '1', text: '護照 (有效期需六個月以上)', completed: false },
-        { id: '2', text: '國際駕照 (開車組必備)', completed: false },
-        { id: '3', text: '網卡 / Wi-Fi 分享器', completed: false },
-        { id: '4', text: '日幣現金 (租車補費與市場用)', completed: false },
-        { id: '5', text: '拖鞋 (海灘/瀨長島必備)', completed: false },
-        { id: '6', text: '暈船藥 (賞鯨必備！)', completed: false },
-        { id: '7', text: '泳具 (泡 Spa / 按摩浴缸用)', completed: false },
-        { id: '8', text: '充電器 / 行動電源', completed: false }
+        { id: '2', text: '台灣駕照正本+日文譯本 (羊已準備；禮拜三若有時間也換個譯本)', completed: false },
+        { id: '3', text: '網卡*6 (Bobo已準備)', completed: false },
+        { id: '4', text: '日幣現金 (需要提領 - 羊、Bobo、蓉)', completed: false },
+        { id: '5', text: '暈船藥、暈車藥 (賞鯨必備)', completed: false },
+        { id: '6', text: '相機+電池*2', completed: false },
+        { id: '7', text: '充電器 / 行動電源', completed: false },
+        { id: '8', text: '長袖*4、睡衣 (T 恤、大學 T、薄針織衫。建議洋蔥式穿法)', completed: false },
+        { id: '9', text: '外套*1 (「防風外套」或「輕羽絨」)', completed: false },
+        { id: '10', text: '長褲or裙子*4 (建議最多3件裙子，第三天賞鯨不建議穿裙子)', completed: false },
+        { id: '11', text: '布鞋*1', completed: false },
+        { id: '12', text: '襪子*4', completed: false },
+        { id: '13', text: '內衣褲*4', completed: false },
+        { id: '14', text: '拖鞋or涼鞋 (海灘/瀨長島必備)', completed: false },
+        { id: '15', text: '泳具 (泡戶外 Spa 用)', completed: false },
+        { id: '16', text: '穿搭配件 (帽子、太陽眼鏡)', completed: false },
+        { id: '17', text: '行動電源 (不可拖運，需有清晰標示，於座椅前方收納)', completed: false },
+        { id: '18', text: '耳機', completed: false },
+        { id: '19', text: '頸枕 (開車時間較長，可自行評估)', completed: false },
+        { id: '20', text: '護唇膏、乳液、保濕', completed: false },
+        { id: '21', text: '防曬', completed: false },
+        { id: '22', text: '塑膠袋 (裝濕衣服)', completed: false },
+        { id: '23', text: '防水袋/夾鏈袋 (賞鯨防手機噴濕)', completed: false },
+        { id: '24', text: 'Google 翻譯 APP', completed: false }
       ];
       setChecks(initial);
       localStorage.setItem('trip_checklist', JSON.stringify(initial));
     }
-    
+
     if (savedNotes) setNotes(JSON.parse(savedNotes));
   }, []);
 
@@ -79,13 +95,13 @@ const ListsTab: React.FC = () => {
     <div className="space-y-6 pb-4">
       {/* Sub Tabs */}
       <div className="bg-white rounded-2xl p-1 flex shadow-sm">
-        <button 
+        <button
           onClick={() => setActiveSubTab('check')}
           className={`flex-1 py-3 rounded-xl text-sm font-bold transition-all ${activeSubTab === 'check' ? 'bg-[#008080] text-white shadow-sm' : 'text-gray-400'}`}
         >
           備案清單
         </button>
-        <button 
+        <button
           onClick={() => setActiveSubTab('notes')}
           className={`flex-1 py-3 rounded-xl text-sm font-bold transition-all ${activeSubTab === 'notes' ? 'bg-[#008080] text-white shadow-sm' : 'text-gray-400'}`}
         >
@@ -95,14 +111,14 @@ const ListsTab: React.FC = () => {
 
       {/* Input */}
       <div className="flex space-x-2">
-        <input 
-          type="text" 
+        <input
+          type="text"
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder={activeSubTab === 'check' ? "新增待辦項目..." : "輸入筆記或網址..."}
           className="flex-grow bg-white border border-gray-100 rounded-2xl px-4 py-3 text-sm focus:outline-none focus:ring-1 focus:ring-[#008080] shadow-sm"
         />
-        <button 
+        <button
           onClick={addItem}
           className="bg-[#008080] text-white px-6 rounded-2xl font-bold active:scale-95 transition-transform shadow-sm"
         >
@@ -114,8 +130,8 @@ const ListsTab: React.FC = () => {
       <div className="space-y-3">
         {activeSubTab === 'check' ? (
           checks.map(item => (
-            <div 
-              key={item.id} 
+            <div
+              key={item.id}
               onClick={() => toggleCheck(item.id)}
               className="bg-white p-4 rounded-2xl shadow-sm border border-gray-50 flex items-center space-x-4 active:bg-gray-50 transition-colors"
             >
