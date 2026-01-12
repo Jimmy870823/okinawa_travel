@@ -99,7 +99,40 @@ const ListsTab: React.FC = () => {
       localStorage.setItem('trip_checklist', JSON.stringify(initial));
     }
 
-    if (savedNotes) setNotes(JSON.parse(savedNotes));
+    if (savedNotes) {
+      const currentNotes = JSON.parse(savedNotes);
+      const initialNotes = [
+        { id: 'n4', content: '關於接駁的注意事項\n接駁流程：\n1️⃣ 取行李並出關後\n2️⃣ 透過 Line 或 WhatsApp 通知我們（準備前往接駁點）\n3️⃣ 前往那霸機場「國內線 1樓・14號C接駁處」\n4️⃣ 抵達後再通知一次我們', timestamp: Date.now() },
+        { id: 'n3', content: '琉球的牛 停車位置參考 https://www.u-shi.net/onna.html', timestamp: Date.now() - 1000 },
+        { id: 'n2', content: '沖繩行腳租車 接駁點位置 https://youtu.be/iAl8v1AAcjM', timestamp: Date.now() - 2000 },
+        { id: 'n1', content: '沖繩行腳租車 取還車&保險教學 https://www.youtube.com/watch?v=XfESZVyiAsk', timestamp: Date.now() - 3000 }
+      ];
+
+      // Merge: Add if not exists
+      const mergedNotes = [...currentNotes];
+      initialNotes.forEach(initNote => {
+        const noteExists = currentNotes.some((n: any) => n.content.includes(initNote.id) || n.content === initNote.content);
+        if (!noteExists) {
+          mergedNotes.unshift(initNote);
+        }
+      });
+
+      if (mergedNotes.length !== currentNotes.length) {
+        setNotes(mergedNotes);
+        localStorage.setItem('trip_notes', JSON.stringify(mergedNotes));
+      } else {
+        setNotes(currentNotes);
+      }
+    } else {
+      const initialNotes = [
+        { id: 'n4', content: '關於接駁的注意事項\n接駁流程：\n1️⃣ 取行李並出關後\n2️⃣ 透過 Line 或 WhatsApp 通知我們（準備前往接駁點）\n3️⃣ 前往那霸機場「國內線 1樓・14號C接駁處」\n4️⃣ 抵達後再通知一次我們', timestamp: Date.now() },
+        { id: 'n3', content: '琉球的牛 停車位置參考 https://www.u-shi.net/onna.html', timestamp: Date.now() - 1000 },
+        { id: 'n2', content: '沖繩行腳租車 接駁點位置 https://youtu.be/iAl8v1AAcjM', timestamp: Date.now() - 2000 },
+        { id: 'n1', content: '沖繩行腳租車 取還車&保險教學 https://www.youtube.com/watch?v=XfESZVyiAsk', timestamp: Date.now() - 3000 }
+      ];
+      setNotes(initialNotes);
+      localStorage.setItem('trip_notes', JSON.stringify(initialNotes));
+    }
   }, []);
 
   const saveChecks = (newItems: ChecklistItem[]) => {
