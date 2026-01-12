@@ -14,7 +14,7 @@ export const ITINERARY: DailyItinerary[] = [
       { time: '16:45', activity: '沖繩行腳租車', isImportant: true, note: '需國際護照，補價差(需現金！)，領車' },
       { time: '18:00', activity: '飯店 Check-in', isImportant: true, note: '飯店 13-21點提供免費迎賓飲料與泡盛無限暢飲！' },
       { time: '18:30', activity: '尋找晚餐', note: '待尋找' },
-      { time: '19:30', activity: '逛國際通商圈', mapUrl: 'https://www.google.com/maps/search/?api=1&query=國際通' }
+      { time: '19:30', activity: '逛國際通商圈', note: '可以先去逛札幌藥妝 買藥妝的東西 只有國際通有藥妝店', mapUrl: 'https://www.google.com/maps/search/?api=1&query=國際通' }
     ]
   },
   {
@@ -42,6 +42,7 @@ export const ITINERARY: DailyItinerary[] = [
       { time: '12:30', activity: 'cocoroar 甜點', note: '提拉米蘇、鬆餅、夏威夷飯', mapUrl: 'https://www.google.com/maps/search/?api=1&query=cocoroar' },
       { time: '13:00', activity: 'okinawa cerrado coffee', note: '買杯咖啡' },
       { time: '14:00', activity: 'Parco city', note: '逛街 shopping', mapUrl: 'https://www.google.com/maps/search/?api=1&query=Parco+City' },
+      { time: '17:30', activity: 'KOJIMAxBicCamera 那霸店', note: '逛電器 家電', mapUrl: 'https://www.google.com/maps/search/?api=1&query=KOJIMAxBicCamera+那霸店' },
       { time: '18:30', activity: '飯店 Check-in', note: '那霸雞尾酒住宿飯店' },
       { time: '19:00', activity: '尋找晚餐 / 逛市區' }
     ]
@@ -54,7 +55,7 @@ export const ITINERARY: DailyItinerary[] = [
       { time: '07:00', activity: '飯店出發', note: '那霸雞尾酒住宿飯店' },
       { time: '07:10', activity: '超商', note: '買早餐吃早餐！' },
       { time: '07:50', activity: '賞鯨之旅', isImportant: true, note: 'Marine club berry naha (時常約三小時)', mapUrl: 'https://www.google.com/maps/search/?api=1&query=Marine+club+berry+naha' },
-      { time: '12:00', activity: '尋找午餐', note: '自由用餐' },
+      { time: '12:00', activity: '午餐 : Ryoshi Shokudo Obanburumai Sakana Daitoryo', note: '吃海鮮 烤鰻魚烤魚', mapUrl: 'https://www.google.com/maps/search/?api=1&query=Ryoshi+Shokudo+Obanburumai+Sakana+Daitoryo' },
       { time: '13:30', activity: '波上宮', note: '觀光巡禮', mapUrl: 'https://www.google.com/maps/search/?api=1&query=波上宮' },
       { time: '15:00', activity: '玉泉洞', note: '壯觀鐘乳石洞', mapUrl: 'https://www.google.com/maps/search/?api=1&query=玉泉洞' },
       { time: '18:00', activity: '飯店 Check-in', isImportant: true, note: '瀨長島頂樓空中酒吧 Happy Hour (17-21:30) 免費酒水/飲品小食！' },
