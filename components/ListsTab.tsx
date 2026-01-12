@@ -38,7 +38,12 @@ const ListsTab: React.FC = () => {
         { id: '21', text: '防曬', completed: false },
         { id: '22', text: '塑膠袋 (裝濕衣服)', completed: false },
         { id: '23', text: '防水袋/夾鏈袋 (賞鯨防浪花噴濕手機/相機)', completed: false },
-        { id: '24', text: 'Google 翻譯 APP', completed: false }
+        { id: '24', text: 'Google 翻譯 APP', completed: false },
+        { id: '25', text: '卸妝乳', completed: false },
+        { id: '26', text: '隱形眼鏡', completed: false },
+        { id: '27', text: '電動牙刷', completed: false },
+        { id: '28', text: '梳子', completed: false },
+        { id: '29', text: '摺疊傘', completed: false }
       ];
 
       // Merge: Add items that don't exist in current state
@@ -83,7 +88,12 @@ const ListsTab: React.FC = () => {
         { id: '21', text: '防曬', completed: false },
         { id: '22', text: '塑膠袋 (裝濕衣服)', completed: false },
         { id: '23', text: '防水袋/夾鏈袋 (賞鯨防浪花噴濕手機/相機)', completed: false },
-        { id: '24', text: 'Google 翻譯 APP', completed: false }
+        { id: '24', text: 'Google 翻譯 APP', completed: false },
+        { id: '25', text: '卸妝乳', completed: false },
+        { id: '26', text: '隱形眼鏡', completed: false },
+        { id: '27', text: '電動牙刷', completed: false },
+        { id: '28', text: '梳子', completed: false },
+        { id: '29', text: '摺疊傘', completed: false }
       ];
       setChecks(initial);
       localStorage.setItem('trip_checklist', JSON.stringify(initial));
