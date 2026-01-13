@@ -11,6 +11,16 @@ import InfoTab from './components/InfoTab';
 
 const App: React.FC = () => {
   const [activeTab, setActiveTab] = useState<TabType>(TabType.PLAN);
+  const [fontSize, setFontSize] = useState<'small' | 'medium' | 'large'>(
+    (localStorage.getItem('app-font-size') as 'small' | 'medium' | 'large') || 'medium'
+  );
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    root.classList.remove('font-size-small', 'font-size-medium', 'font-size-large');
+    root.classList.add(`font-size-${fontSize}`);
+    localStorage.setItem('app-font-size', fontSize);
+  }, [fontSize]);
 
   // Initialize scrolling and state
   useEffect(() => {
@@ -36,8 +46,12 @@ const App: React.FC = () => {
 
   return (
     <div className="flex flex-col min-h-screen pb-20">
-      <Header activeTab={activeTab} />
-      
+      <Header
+        activeTab={activeTab}
+        fontSize={fontSize}
+        setFontSize={setFontSize}
+      />
+
       <main className="flex-grow px-4 py-6 max-w-md mx-auto w-full">
         <div className="animate-in fade-in duration-500">
           {renderContent()}
